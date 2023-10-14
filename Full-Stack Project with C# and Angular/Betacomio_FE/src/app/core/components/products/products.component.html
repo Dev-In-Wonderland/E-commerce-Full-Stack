@@ -1,0 +1,78 @@
+<!-- <div class="mainDiv">
+  <form style="background-color: yellow;" #f="ngForm" (submit)="addToCart(f)">
+    <p *ngIf="srv.products.length > 0">{{srv.products[0].modelName}}</p>
+    <mat-form-field *ngIf="srv.uniqueColors.length > 0">
+      <mat-label>Select color</mat-label>
+      <mat-select  id="color" #color="ngModel" name="color" ngDefaultControl [ngModel]="colorSize?.color" >
+        <mat-option *ngFor="let c of srv.uniqueColors" value="{{c}}"  >{{c}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="srv.uniqueSize.length > 0">
+      <mat-label>Select size</mat-label>
+      <mat-select #size="ngModel" name="size" ngDefaultControl [ngModel]="colorSize?.size">
+        <mat-option *ngFor="let s of srv.uniqueSize" value="{{s}}" (click)="selectWeight(s)">{{s}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button type="submit" >Add to Cart</button>
+  </form>
+
+  <div *ngIf="srv.products.length > 0">
+    <p>Description: {{srv.products[0].description}}</p>
+    <p>Price: <span style="text-decoration: line-through; color: red;">{{srv.products[0].listPrice}}</span> {{srv.products[0].standardCost}} </p>
+    <p>Weight: {{this.srv.weight ?  this.srv.weight : 'N/A'}}</p>
+  </div>
+
+  <button [routerLink]="['../../cart']">CART</button>
+</div> -->
+
+<!--######################################################################################################################-->
+
+<div class="mainDiv">
+    <section class="section1" style="background-color: aquamarine;">
+      <div class="detailsPhoto">
+
+        <img src="https://picsum.photos/290/290" alt="">
+        <!-- <div class="photo">
+          
+        </div> -->
+      </div>
+
+      <div class="details">
+        <form style="background-color: yellow;" #f="ngForm" (submit)="addToCart(f)" class="detailForm">
+          <div class="productName">
+            <p *ngIf="srv.products.length > 0">{{srv.products[0].modelName}}</p>
+          </div>
+
+          <mat-form-field *ngIf="srv.uniqueColors.length > 0">
+            <mat-label>Select color</mat-label>
+            <mat-select  id="color" #color="ngModel" name="color" ngDefaultControl [ngModel]="colorSize?.color" >
+              <mat-option *ngFor="let c of srv.uniqueColors" value="{{c}}"  >{{c}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field *ngIf="srv.uniqueSize.length > 0">
+            <mat-label>Select size</mat-label>
+            <mat-select #size="ngModel" name="size" ngDefaultControl [ngModel]="colorSize?.size">
+              <mat-option *ngFor="let s of srv.uniqueSize" value="{{s}}" (click)="selectWeight(s)">{{s}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <div class="price">
+            <p>Price: <span style="text-decoration: line-through; color: red;">{{srv.products[0].listPrice}}</span> {{srv.products[0].standardCost}} </p>
+            <button type="submit" >Add to Cart</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section2" style="background-color:blue;">
+      <div class="description">
+        <p>Description: {{srv.products[0].description}}</p>
+        <p>Weight: {{this.srv.weight ?  this.srv.weight : 'N/A'}}</p>
+      </div>
+  </section>
+</div>

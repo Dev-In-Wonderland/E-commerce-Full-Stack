@@ -1,0 +1,50 @@
+.mainDiv{
+    padding: 10px;
+}
+
+.section1{
+    display: flex;
+   flex-wrap: wrap;
+    margin: auto;
+    justify-content: flex-start;
+}
+
+.detailsPhoto{
+   width: 290px;
+   height: 290px;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+    object-fit: contain;
+    margin: auto;
+
+}
+.detailsPhoto > img{
+    width:100%;
+    height: 100%;
+}
+
+.details{
+display: flex;
+justify-content: start;
+   width: 70%;
+   height: 300px;
+   background-color: blue;   
+}
+@media(max-width: 1126px) {
+    .details {
+    display: flex;
+justify-content: start;
+   width: 100%;
+   height: 100%;
+   background-color: blue; 
+}
+}
+
+.detailForm{
+    display: inline-block;
+    width: 100%;
+    margin: 1rem;
+}

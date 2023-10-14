@@ -1,0 +1,25 @@
+
+<section class="hero">
+  <div class="welcome">
+    <p>WELCOME TO BETACOMIO</p>
+  </div>
+  <p class="heroTxt">
+    “A world full of AdventureWorks,
+  Explore our site and find the most suitable item for your adventures„
+  </p>
+</section>
+<section class="parentCategories">
+  <div class="card-container" *ngFor="let pc of srv.parentCategories let i = index"> 
+    <div class="card" [routerLink]="['/categories', pc.productCategoryId]" style="background: url(https://picsum.photos/300/300?random={{i}}) no-repeat;"> 
+    <div class="front-content"> 
+      <p>{{pc.parentProductCategoryName}}</p>
+    </div> 
+    <div class="content"> 
+      <p class="heading">Our: {{pc.parentProductCategoryName}}</p> 
+      <p> 
+       Click HERE to discover our Selection of {{pc.parentProductCategoryName}}
+      </p> 
+    </div> 
+  </div> 
+  </div>
+</section>

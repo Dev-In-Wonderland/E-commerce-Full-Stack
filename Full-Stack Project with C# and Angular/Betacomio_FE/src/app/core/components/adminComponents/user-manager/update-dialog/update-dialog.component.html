@@ -1,0 +1,12 @@
+<form #updateF="ngForm" (submit)="srv.updateUser(updateF, this.srv.uID)">
+  <!-- <input #NameRef="ngModel" [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Insert First Name" required value="{{this.srv.user?.firstName}}">
+  <input #MiddleRef="ngModel" [(ngModel)]="middleName" name="middleName" type="text" placeholder="Insert Middle Name" value="{{this.srv.user?.middleName}}">
+  <input #LastRef="ngModel" [(ngModel)]="lastName" name="lastName" type="text" placeholder="Insert Last Name" required value="{{this.srv.user?.lastName}}">
+  <input #UserRef="ngModel" [(ngModel)]="userName" name="userName" type="text" placeholder="Insert Username 'optional" value="{{this.srv.user?.userName}}">
+  <input #EmailRef="ngModel" [(ngModel)]="email" name="email" type="email" placeholder="Insert email" required value="{{this.srv.user?.emailAddress}}">
+  <input #PhoneRef="ngModel" [(ngModel)]="phoneNumber" name="phoneNumber" type="text" placeholder="Insert Phone Number" value="{{this.srv.user?.phone}}"> -->
+  <mat-checkbox #checkRef="ngModel" [(ngModel)]="isAdmin" name="isAdmin" class="example-margin" value="{{this.srv.user?.isAdmin}}">Admin</mat-checkbox >
+  <button type="submit">Submit</button>
+</form>
+
+<!-- riempire oggetto user: User da passare a update -->

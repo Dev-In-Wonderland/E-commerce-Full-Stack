@@ -1,0 +1,19 @@
+<form class="loginStyle" #f="ngForm" (submit)="srv.postNewUser(f)">
+  <p>Account registration</p>
+  <input #NameRef="ngModel" [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Insert First Name" required>
+  <br>
+  <input #MiddleRef="ngModel" [(ngModel)]="middleName" name="middleName" type="text" placeholder="Insert Middle Name">
+  <br>
+  <input #LastRef="ngModel" [(ngModel)]="lastName" name="lastName" type="text" placeholder="Insert Last Name" required>
+  <br>
+  <input #UserRef="ngModel" [(ngModel)]="userName" name="userName" type="text" placeholder="Insert Username 'optional">
+  <br>
+  <input #EmailRef="ngModel" [(ngModel)]="email" name="email" type="email" placeholder="Insert email" required>
+  <br>
+  <input #PhoneRef="ngModel" [(ngModel)]="phoneNumber" name="phoneNumber" type="text" placeholder="Insert Phone Number">
+  <br>
+  <input #PwdRef="ngModel" [(ngModel)]="password" name="password" type="text" placeholder="Insert Password" required>
+  <br>
+  <br>
+  <button type="submit" [disabled]="f.invalid">Submit</button>
+</form>

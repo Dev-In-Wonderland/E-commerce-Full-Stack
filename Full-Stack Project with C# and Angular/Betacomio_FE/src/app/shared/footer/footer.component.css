@@ -1,0 +1,45 @@
+footer {
+    background-color: lightgray;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    
+
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+
+
+  .container{
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+
+  #x, #facebook, #instagram, #linkedin{
+    width: 3rem;
+    height: 3rem;
+  }
+
+
+  @media screen and (max-width: 640px) {
+
+    #x, #facebook, #instagram, #linkedin{
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .container{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+      }
+  }
+
+
+

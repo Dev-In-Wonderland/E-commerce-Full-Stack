@@ -1,0 +1,284 @@
+/* 
+.nav-links { 
+  display: flex; 
+  justify-content: space-between; 
+} 
+a { 
+  padding: 0.5rem; 
+  text-decoration: none;
+  color: initial;
+}
+
+.example-form{
+  margin-top: 1rem;
+}
+
+.logo img{
+  margin-left: 1rem;
+  width:5rem;
+  height: 4rem;
+  border-radius: 20px;
+}
+
+
+#search{
+
+width: 1rem;
+height: 1rem;
+
+}
+.nav-buttons button, .nav-links a, .nav-button a{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+  border: solid black 5px;
+  border-radius: 16px;
+  background-color: rgb(223, 157, 15);
+}
+
+
+.nav-buttons button, .nav-button a{
+  padding: 0.5rem
+}
+
+
+#cart{
+  width: 3rem;
+  height: 3rem ;
+  border-radius: 16px;
+}
+
+#cart:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#profile{
+  width: 2rem;
+  height: 2rem ;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  
+}
+#history{
+  width: 2rem;
+  height: 2rem ;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  
+}
+
+#nav-button-profile{
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+}
+#nav-button-history{
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+}
+
+ 
+
+
+
+
+ .navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  background-color: rgb(223, 157, 15);
+  margin-bottom: 5rem;
+
+ } */
+
+/* Stile predefinito per schermi di larghezza superiore a 768px */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgb(223, 157, 15); */
+  background-color: lightgray;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: initial;
+}
+
+.example-form {
+  margin-top: 1rem;
+}
+
+.logo img {
+  margin-left: 1rem;
+  width: 5rem;
+  height: 4rem;
+  border-radius: 20px;
+}
+
+#search {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-buttons button,
+.nav-links a,
+.nav-button a {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+  border: solid black 5px;
+  border-radius: 16px;
+  background-color: lightgray;
+  /* background-color: rgb(223, 157, 15); */
+}
+
+#parent {
+  /* padding: 10px; */
+  border: none;
+}
+
+.nav-buttons button,
+.nav-button a {
+  padding: 0.5rem;
+}
+
+#cart,
+#admin {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 16px;
+}
+
+#cart:hover,
+#admin:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#profile,
+#history,
+#parent-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
+#admin-button {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+  border: none;
+  border-radius: 16px;
+  /* background-color: rgb(223, 157, 15); */
+  margin-left: 0.5rem;
+}
+
+#nav-button-profile,
+#nav-button-history {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Stile per schermi di larghezza compresa tra 481px e 768px */
+@media screen and (max-width: 960px) {
+  .navbar {
+    /* flex-direction: column; */
+  }
+
+  .nav-links,
+  .nav-buttons,
+  .nav-button {
+    /* text-align: center; */
+    /* width: 100%; */
+  }
+  .nav-button,
+  .nav-buttons {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 1rem; /* Aumenta il padding per migliorare la facilità di clic */
+  }
+
+  /* Riduci le dimensioni delle immagini degli elementi del menu */
+  #profile,
+  #history,
+  #cart {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  #nav-button-profile p,
+  #nav-button-history p,
+  #parent p {
+    display: none;
+  }
+
+  /* Personalizza ulteriormente lo stile per schermi medi */
+}
+
+/* Stile per schermi di larghezza inferiore a 480px */
+/* @media screen and (max-width: 640px) {
+  .navbar {
+    margin-bottom: 3rem; 
+    flex-direction: column;
+  }
+
+  .navbar * {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+  /* .nav-links a {
+    padding: 0.5rem 0.8rem; /* Riduci leggermente il padding 
+  } */
+/* 
+  #example-form input {
+    display: none;
+  }
+
+  #nav-button-history p,
+  #nav-button-profile p {
+    display: none;
+  }
+
+  #search-bar {
+    display: none;
+  }
+  .logo img {
+    margin-bottom: 20px;
+  }
+
+  #login,
+  #register {
+    margin-bottom: 10px;
+    width: 100px;
+  }
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+} */
+
+@media screen and (max-width: 640px) {
+  #example-form input {
+    display: none;
+  }
+}

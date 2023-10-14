@@ -1,0 +1,21 @@
+<form class="loginStyle" #loginF="ngForm" (submit)="login(loginF)">
+  <p>Input your credentials</p>
+  <br>
+  <div>
+    <label>Username </label>
+    <input #EmailRef="ngModel" [(ngModel)]="email" name="email" type="email" placeholder="Insert email" required>
+  </div>  
+  <br>
+  <div>
+    <label>Password </label>
+    <input #PwdRef="ngModel" [(ngModel)]="password" name="password" type="text" placeholder="Insert Password" required>
+  </div>
+  <br>
+  <button type="submit" [disabled]="loginF.invalid">Login</button>
+</form>
+
+
+
+
+
+

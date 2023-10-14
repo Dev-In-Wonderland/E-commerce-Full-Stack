@@ -1,0 +1,97 @@
+<nav class="navbar">
+  <div class="logo">
+    <img
+      src="https://cdn1.vectorstock.com/i/1000x1000/25/95/bicycle-bike-logo-vector-22962595.jpg"
+      alt=""
+    />
+  </div>
+<div id="search-bar">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label style="border-radius: 16px"
+        >Choose a Model
+        <img
+          id="search"
+          src="https://static.vecteezy.com/system/resources/previews/018/931/574/original/magnifying-glass-icon-png.png"
+          alt=""
+        />
+      </mat-label>
+      <input
+        type="text"
+        aria-label="Number"
+        matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+        (keyup.enter)="navigateToProduct(myControl.value)"
+      />
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          (click)="navigateToProduct(myControl.value)"
+          *ngFor="let option of filteredOptions | async"
+          [value]="option.nomeModello"
+        >
+          {{ option.nomeModello }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+  <div class="nav-links">
+    <img id="parent-img" src="https://cdn.icon-icons.com/icons2/2751/PNG/512/category_icon_176162.png" alt="">
+    <a id="parent" [routerLink]="'/parentCategories'"><p>HOME</p></a>
+    
+  </div>
+  <div  class="nav-buttons">
+    <button id="login" style="margin-right: 10px;"
+      *ngIf="!checkSession(); else logoutTemp"
+      (click)="openLoginDialog()"
+    >
+      LOGIN
+    </button>
+    <button id="register" *ngIf="!checkSession()" [routerLink]="'/registration'">
+      REGISTER
+    </button>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <a id="nav-button-profile" *ngIf="checkSession()" [routerLink]="['/user']"
+      ><img
+        id="profile"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllunPmpqy6BoGWIhxKylOATFQw7L-wmGf2g&usqp=CAU"
+        alt=""
+        />
+      <p>My Profile</p></a
+    >
+  </div>
+  <div style="margin-top: 10px;">
+    <a
+      id="nav-button-history"
+      *ngIf="checkSession()"
+      [routerLink]="['/history']"
+      ><img
+      id="history"
+        src="https://media.istockphoto.com/id/1254374193/it/vettoriale/icona-libro.jpg?s=1024x1024&w=is&k=20&c=-ejWRcLgheoaBx2_EQjhLIenLV4-r3P7G48mDSlo69Q="
+        alt=""
+      />
+      <p>Order History</p></a
+    >
+  </div>
+  <div>
+    <a id="admin-button" style="margin-left: 4px" *ngIf="checkAdmin()" [routerLink]="'/admin'"
+      ><img id="admin"
+        src="data:image/png;base64,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"
+        alt=""
+      />
+  </a>
+    <a *ngIf="checkSession()" [routerLink]="['/cart']"
+    ><img
+        id="cart"
+        src="https://previews.123rf.com/images/rastudio/rastudio1708/rastudio170808774/84742482-icona-di-linea-del-carrello-di-acquisto-isolato-su-priorit%C3%A0-bassa-bianca-icona-della-linea-del.jpg"
+        alt=""
+    /></a>
+  </div>
+</nav>
+
+<ng-template #logoutTemp>
+  <button (click)="logout()">LOGOUT</button>
+</ng-template>

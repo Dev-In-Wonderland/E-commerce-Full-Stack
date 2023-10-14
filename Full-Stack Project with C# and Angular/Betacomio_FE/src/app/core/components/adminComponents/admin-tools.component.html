@@ -1,0 +1,14 @@
+<hr>
+<hr>
+<hr>
+<button (click)="this.usrv.getUsers()">Manage Users</button>
+<app-user-manager *ngIf="this.usrv.users.length > 0"></app-user-manager>
+<hr>
+<hr>
+<hr>
+<hr>
+<button (click)="show()">Manage products</button>
+<app-product-manager *ngIf="ciao"></app-product-manager>
+<hr>
+<hr>
+<hr>
